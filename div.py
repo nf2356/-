@@ -34,10 +34,10 @@ def main():
         df = html_table_to_df(rows)
 
         # 상위 50행만 선택
-        top20 = df.head(50)
+        top = df.head(50)
 
         # 데이터를 엑셀 파일로 저장
-        top20.to_excel('배당금순위.xlsx', index=False)
+        top.to_excel('배당금순위.xlsx', index=False)
 
     else:
         print(f'Failed to retrieve page. Status code: {response.status_code}')
